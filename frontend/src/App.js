@@ -91,7 +91,7 @@ function App() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await fetch('http://localhost:8000/predict', {
+    const res = await fetch('https://house-pre-backend.onrender.com/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
@@ -105,7 +105,7 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await fetch("http://localhost:8000/predict-csv", {
+    const res = await fetch("https://house-pre-backend.onrender.com/", {
       method: "POST",
       body: formData
     });
